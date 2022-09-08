@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/dark-mode-keyframe-animations-grid-area-template-HpaQPKjbex)
+- Live Site URL: (https://jetyun.github.io/Frontend-mentor-Four-card-feature-section/)
 
 ## My process
 
@@ -53,6 +53,8 @@ Users should be able to:
 - How to use grid template area more effectively. Turns out that grid template row will affect the layout in grid template area, so i must amend both to get my desired result.
 - How to apply "dark mode" to my website. It is the same as media quary for the width of the screen.
 - How to use keyframes animation. Keyframes is like setting animation on the website with tools like rotate, skew, translate and skale on the time frame (0% till 100%).
+- In my CSS file, i have named each component in the roots by (purpose=>classes that is impacted by the purpose), i think it helps a lot by naming it this way, to improve the readability and easier to amend in the future.
+- for the classes, I used BEM method to name each classes, also to make it easier to read and amendable for the future. 
 
 To see how you can add code snippets, see below:
 
