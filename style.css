@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/* Arrangement: Universal, Root, Combined class, individual class, pseudo class, media quary */
+*{padding:0;
+  margin:0;
+box-sizing: border-box;
+font-size: 16px;
+font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: var(--Color__background---body);
+}
+:root{
+--Font__size:0.9375rem;
+--Color__background---body:hsl(0, 0%, 98%);
+--Color__topborder---firstchild_boxCard---:hsl(180, 62%, 55%);
+--Color__topborder---secondchild_boxCard---:hsl(0, 78%, 62%);
+--Color__topborder---thirdchild_boxCard---:hsl(34, 97%, 64%);
+--Color__topborder---fourthchild_boxCard---:hsl(212, 86%, 64%);
+--Color__font---firstTitle---secondTitle---boxGrid_boxCard_Title---:hsl(234, 12%, 34%);
+--Color__font---Explanation---boxCard_Explanation:hsl(229, 6%, 66%);
+--Weight__font---secondTitle---boxGrid_boxCard_Title---:600;
+--Weight__font---firstTitle---:200;
+}
+/* combined class */
+.firstTitle, .secondTitle, .Explanation{
+  text-align: center;
+}
+.firstTitle, .secondTitle, .boxGrid_boxCard_Title{
+
+  font-size: 1.4rem;
+}
+.boxGrid_boxCard:nth-child(1), .boxGrid_boxCard:nth-child(2), .boxGrid_boxCard:nth-child(3), .boxGrid_boxCard:nth-child(4){
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 90% 90%;
+}
+/* individual class */
+.firstTitle{
+  font-weight: var(--Weight__font---firstTitle---);
+  color:var(--Color__font---firstTitle---secondTitle---boxGrid_boxCard_Title---);
+  margin-top: 100px;
+}
+.secondTitle{
+  font-weight:var(--Weight__font---secondTitle---boxGrid_boxCard_Title---);
+  color:var(--Color__font---firstTitle---secondTitle---boxGrid_boxCard_Title---);
+  margin-bottom: 20px;
+
+}
+.Explanation{
+color:var(--Color__font---Explanation---boxCard_Explanation);
+margin: auto;
+margin-bottom: 80px;
+font-size: var(--Font__size);
+
+width: min(80%, 500px);
+
+}
+.boxGrid{
+  display:grid;
+  grid-template-rows: 250px 250px 250px 250px;
+  grid-gap:20px;
+justify-items: center;
+
+}
+.boxGrid_boxCard{
+width:min(80%, 500px);
+background-color: white;
+box-shadow: 0 10px 20px rgb(219, 219, 219);
+border-radius: 5px;
+padding:30px;
+}
+.boxGrid_boxCard_Title{
+color:var(--Color__font---firstTitle---secondTitle---boxGrid_boxCard_Title---);
+margin-bottom: 10px;
+}
+.boxGrid_boxCard_Explanation{
+font-size: 0.8rem;
+color:var(--Color__font---Explanation---boxCard_Explanation);
+}
+/* pseudo classes */
+
+
+.boxGrid_boxCard:nth-child(1){
+border-top: 5px solid var(--Color__topborder---firstchild_boxCard---);
+background-image: url("images/icon-supervisor.svg");
+}
+.boxGrid_boxCard:nth-child(1):hover{
+  animation:shake 0.6s 50;
+}
+@keyframes shake{
+0%{
+  translate:0;
+}
+10%{
+  translate:0px -2px;
+}
+20%{
+  translate:2px; 
+}
+30%{
+  translate:0px 2px;
+}
+40%{
+  translate:0px 2px;
+}
+50%{
+  translate:-2px;
+}
+60%{
+  translate:-2px;
+}
+70%{
+  translate:0 -2px;
+}
+80%{
+  translate:0 -2px;
+}
+90%{
+  translate:2px; 
+}
+100%{
+  translate: 0 2px;
+}
+}
+.boxGrid_boxCard:nth-child(2){
+border-top: 5px solid var(--Color__topborder---secondchild_boxCard---);
+background-image: url("images/icon-team-builder.svg");
+}
+.boxGrid_boxCard:nth-child(2):hover{
+  animation: rotate 2s 1;
+}
+@keyframes rotate{
+  0%{
+    rotate: 0deg;
+  }
+  25%{
+    rotate: 20deg;
+  }
+  50%{
+    rotate: -20deg;
+  }
+  75%{
+    rotate: 20deg;
+  }
+  100%{
+    rotate: 0deg;
+  }
+}
+.boxGrid_boxCard:nth-child(3){
+border-top: 5px solid var(--Color__topborder---thirdchild_boxCard---);
+background-image: url("images/icon-karma.svg");
+}
+.boxGrid_boxCard:nth-child(3):hover{
+  animation: beatingheart 1s 5;
+
+}
+@keyframes beatingheart{
+  0%{
+    scale:1;
+  }
+  50%{
+    scale:0.9;
+
+  }
+  100%{
+    scale:1.1;
+  
+  }
+}
+
+.boxGrid_boxCard:nth-child(4){
+border-top: 5px solid var(--Color__topborder---fourthchild_boxCard---);
+background-image: url("images/icon-calculator.svg");
+}
+.boxGrid_boxCard:nth-child(4):hover{
+  animation: spacewrap 1s 1;
+}
+@keyframes spacewrap{
+  0%{
+    transform: skew(0deg, 0deg);
+  }
+  25%{
+    transform: skew(25deg, 0deg);
+  }
+  50%{
+    transform: skew(0deg, 25deg);
+  }
+  100%{
+    transform: skew(-5deg, -5deg);
+  }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 930px){
+.firstTitle, .secondTitle{
+font-size: 2.26rem;
+}
+
+
+  .Explanation{
+
+    margin-bottom: 40px;
+
+    }
+
+.boxGrid{
+  grid-template-rows: 100px 100px 100px 100px;
+  padding:50px;
+  grid-gap: 50px;
+margin: auto;
+  width:min(100%, 1295px);
+}
+  .boxGrid_boxCard{
+    width:min(100%, 350px);
+
+
+    }
+      .boxGrid_boxCard:nth-child(1){
+grid-area: sup;
+  }
+  .boxGrid_boxCard:nth-child(2){
+    grid-area: tea; 
+    
+  }
+  .boxGrid_boxCard:nth-child(3){
+    grid-area: kar; 
+  }
+  .boxGrid_boxCard:nth-child(4){
+    grid-area: cal; 
+  }
+  .boxGrid{
+grid-template-areas: 
+                     '. . tea tea . .'
+                     'sup sup tea tea cal cal '                 
+                     'sup sup kar kar cal cal '                 
+                     ' . . kar kar . .';
+  }
+}
+
+@media(prefers-color-scheme: dark){
+body{
+ background-color: black;
+}
+.boxGrid_boxCard{
+background-color: black;
+}
+
+
+
+}
